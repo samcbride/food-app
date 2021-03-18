@@ -1,16 +1,13 @@
 import React from "react";
 import PropTypes from "prop-types";
 
-const SearchResults = ({ results }) => {
-  return results ? (
-    results.map((result) => {
+const SearchResults = (searchResults) => {
+  return searchResults ? (
+    searchResults.map((result) => {
       return (
-        <> 
+        <>
           <div className="recipe-card">
-            <div 
-              className="recipe"
-              src={result}
-            />
+            <div className="recipe" src={result} />
           </div>
         </>
       );
@@ -21,7 +18,7 @@ const SearchResults = ({ results }) => {
 };
 
 SearchResults.propTypes = {
-  results: PropTypes.array.isRequired,
+  searchResults: PropTypes.array,
 };
 
 export default SearchResults;
