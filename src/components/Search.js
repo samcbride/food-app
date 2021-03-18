@@ -1,7 +1,8 @@
 /* eslint-disable no-lone-blocks */
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-const Search = () => {
+const Search = ({ handleSubmit }) => {
   const initialState = {
     fields: {
       ingredient: "",
@@ -11,7 +12,7 @@ const Search = () => {
 
   const handleSearch = (event) => {
     event.preventDefault();
-    console.log(inputValue); // this needs to be connected to the backend
+    handleSubmit(inputValue);
   };
 
   const handleInputChange = (event) => {
@@ -41,6 +42,10 @@ const Search = () => {
 };
 
 export default Search;
+
+Search.propTypes = {
+  handleSubmit: PropTypes.func.isRequired,
+};
 
 // npm i --save react-select
 // import Select from "react-select";
