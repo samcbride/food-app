@@ -1,18 +1,15 @@
 /* eslint-disable no-lone-blocks */
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import fetchRecipes from "../requests/axiosrecipe";
 
 const Search = ({ handleSubmit }) => {
-  const initialState = {
-    fields: {
-      ingredient: "",
-    },
-  };
-  const [inputValue, setInputValue] = useState(initialState.fields);
+  
+  const [inputValue, setInputValue] = useState();
 
-  const handleSearch = (event) => {
+  const handleSearch = async (event) => {
     event.preventDefault();
-    handleSubmit(inputValue);
+    handleSubmit(await fetchRecipes(inputValue));
   };
 
   const handleInputChange = (event) => {
@@ -28,7 +25,7 @@ const Search = ({ handleSubmit }) => {
           type="text"
           id="ingredient"
           name="ingredient"
-          value={initialState.ingredient}
+          //value={initialState.ingredient}
           onChange={handleInputChange}
         />
         {/* <option value="tomato">Tomato</option>

@@ -8,7 +8,8 @@ function App() {
   const getResults = async (searchInput) => {
     const recipes = await searchInput;
     setSearchResults(recipes);
-  };
+    
+    };
   return (
     <div className="App">
       What's in your cupboard?
