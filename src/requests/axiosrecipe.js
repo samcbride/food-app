@@ -39,19 +39,24 @@ const fetchRecipes = async (...ingredients) => {
   const mappedIngreds = ingredients
     .map((ingredient, idx) => {
       if (idx < ingredients.length - 1) {
-        return ingredient + "+";
+        return ingredient.ingredient + "+";
       } else {
-        return ingredient;
+        return ingredient.ingredient;
       }
     })
     .join("");
-
-  const url = `${apiURL}${mappedIngreds}${maxIngreds}${maxTime}${apiId}${apiKey}`;
+   
+    
+    const apiWithQuery = `${apiURL}${mappedIngreds}`
+  const url = `${apiWithQuery}${maxIngreds}${maxTime}${apiId}${apiKey}`;
+  
   const res = await axios.get(url);
-  const recipes = res.data;
-  console.log(recipes);
-
+  const recipes = res.data.hits;
+  console.log(recipes) 
+  return recipes;
   // create addToList? (recipes)
 };
 
-fetchRecipes("zucchini", "broccoli", "carrots");
+//fetchRecipes("zucchini", "broccoli", "carrots");
+
+export default fetchRecipes
