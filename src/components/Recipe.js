@@ -1,5 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
+import "../styles/Recipe.css";
 
 const Recipe = (props) => {
   const { title, image, url } = props;

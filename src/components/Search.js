@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
+import "../styles/Search.css";
 
 const Search = ({ handleSubmit }) => {
   const [inputValue, setInputValue] = useState();

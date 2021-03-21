@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import Recipe from "./Recipe";
+import "../styles/SearchResults.css";
 
 const SearchResults = ({ searchResults }) => {
   return (
