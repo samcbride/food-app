@@ -1,0 +1,20 @@
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background: lavenderblush;
+  color: slategray;
+  overflow-x: hidden;
+}
+
+.App {
+  padding: 2em;
+  margin: 2em;
+}
+
+p {
+  text-decoration: none;
+}
