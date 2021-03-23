@@ -2,16 +2,24 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "../styles/Search.css";
 
-const Search = ({ handleSubmit }) => {
+const Search = ({ handleSubmit, setSearchResults }) => {
   const [inputValue, setInputValue] = useState();
+  const [errorMessage, setErrorMessage] = useState("");
 
   const handleSearch = (event) => {
     event.preventDefault();
-    handleSubmit(inputValue);
+    if (inputValue) {
+      handleSubmit(inputValue);
+      setErrorMessage("");
+    } else {
+      setErrorMessage("Please enter your ingredients");
+      setInputValue("");
+      setSearchResults([]);
+    }
   };
 
   const handleInputChange = (event) => {
-    setInputValue({ ...inputValue, [event.target.name]: event.target.value });
+    setInputValue(event.target.value);
   };
 
   return (
@@ -26,7 +34,8 @@ const Search = ({ handleSubmit }) => {
           onChange={handleInputChange}
         />
       </label>
-      <button type="submit">Add</button>
+      <button type="submit">Search</button>
+      {errorMessage}
     </form>
   );
 };

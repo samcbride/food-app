@@ -17,7 +17,7 @@ describe("Search", () => {
     const { getByRole } = render(
       <Search handleSubmit={validProps.handleSubmit} />
     );
-    const button = getByRole("button", { name: /Add/i });
+    const button = getByRole("button", { name: /Search/i });
     expect(button).toBeInTheDocument();
   });
 });
