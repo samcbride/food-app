@@ -17,11 +17,9 @@ const Search = ({ handleSubmit, setSearchResults }) => {
       setSearchResults([]);
     }
   };
-
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
-
   return (
     <form onSubmit={handleSearch}>
       <label>
@@ -39,9 +37,7 @@ const Search = ({ handleSubmit, setSearchResults }) => {
     </form>
   );
 };
-
 export default Search;
-
 Search.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
 };

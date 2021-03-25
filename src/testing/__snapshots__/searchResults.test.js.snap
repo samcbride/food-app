@@ -2,8 +2,9 @@
 
 exports[`SearchResults renders correctly 1`] = `
 <DocumentFragment>
-  <p>
-    No results found.
-  </p>
+  <div
+    class="search-results"
+    data-testid="search-results"
+  />
 </DocumentFragment>
 `;

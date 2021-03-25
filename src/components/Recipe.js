@@ -6,7 +6,7 @@ const Recipe = (props) => {
   const { title, image, url } = props;
 
   return (
-    <div className="recipe">
+    <div className="recipe" data-testid="recipe">
       <div className="recipe__title">{title}</div>
       <a href={url} rel="noreferrer" target="_blank">
         <img className="recipe__image" src={image} alt={title} />
