@@ -15,7 +15,11 @@ function App() {
   return (
     <div className="App">
       <p className="title">What's in your cupboard?</p>
-      <Search className="search" handleSubmit={getResults} />
+      <Search
+        className="search"
+        handleSubmit={getResults}
+        setSearchResults={setSearchResults}
+      />
       <SearchResults className="searchResults" searchResults={searchResults} />
     </div>
   );

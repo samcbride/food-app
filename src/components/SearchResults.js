@@ -5,6 +5,7 @@ import "../styles/SearchResults.css";
 
 const SearchResults = ({ searchResults }) => {
   return (
+
     <div className="search-results" data-testid="search-results">
       {searchResults && 
       searchResults.map((recipe) => (
@@ -15,6 +16,7 @@ const SearchResults = ({ searchResults }) => {
           url={recipe.recipe.url}
         />
       ))}
+
     </div>
   );
 };

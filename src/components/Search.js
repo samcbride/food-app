@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "../styles/Search.css";
+
 const Search = ({ handleSubmit, setSearchResults }) => {
   const [inputValue, setInputValue] = useState();
   const [errorMessage, setErrorMessage] = useState("");
+
   const handleSearch = (event) => {
     event.preventDefault();
     if (inputValue) {
