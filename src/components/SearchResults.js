@@ -6,14 +6,15 @@ import "../styles/SearchResults.css";
 const SearchResults = ({ searchResults }) => {
   return (
     <div className="search-results">
-      {searchResults.map((recipe) => (
-        <Recipe
-          key={recipe.recipe.url}
-          title={recipe.recipe.label}
-          image={recipe.recipe.image}
-          url={recipe.recipe.url}
-        />
-      ))}
+      {searchResults &&
+        searchResults.map((recipe) => (
+          <Recipe
+            key={recipe.recipe.url}
+            title={recipe.recipe.label}
+            image={recipe.recipe.image}
+            url={recipe.recipe.url}
+          />
+        ))}
     </div>
   );
 };

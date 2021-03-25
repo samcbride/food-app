@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Search renders correctly 1`] = `
+<DocumentFragment>
+  <form>
+    <label>
+      Enter your ingredients:
+      <input
+        id="ingredient"
+        name="ingredient"
+        placeholder="Search"
+        type="text"
+      />
+    </label>
+    <button
+      type="submit"
+    >
+      Search
+    </button>
+  </form>
+</DocumentFragment>
+`;
