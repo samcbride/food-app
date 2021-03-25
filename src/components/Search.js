@@ -26,7 +26,7 @@ const Search = ({ handleSubmit }) => {
           onChange={handleInputChange}
         />
       </label>
-      <button type="submit">Add</button>
+      <button type="submit">Search</button>
     </form>
   );
 };

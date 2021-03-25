@@ -5,7 +5,7 @@ import "../styles/SearchResults.css";
 
 const SearchResults = ({ searchResults }) => {
   return (
-    <div className="search-results">
+    <div className="search-results" data-testid="search-results">
       {searchResults.map((recipe) => (
         <Recipe
           key={recipe.recipe.url}
