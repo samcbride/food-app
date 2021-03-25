@@ -1,8 +1,9 @@
-import { useState } from "react";
+import React, { useState, } from "react";
 import "../styles/App.css";
 import Search from "./Search";
 import SearchResults from "./SearchResults";
 import fetchRecipes from "../requests/axiosrecipe";
+import Random from "./Random";
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
@@ -12,7 +13,7 @@ function App() {
     setSearchResults(recipes);
   };
 
-  return (
+   return (
     <div className="App">
       <p className="title">What's in your cupboard?</p>
       <Search
@@ -21,8 +22,11 @@ function App() {
         setSearchResults={setSearchResults}
       />
       <SearchResults className="searchResults" searchResults={searchResults} />
-    </div>
+       <Random 
+       classname="button" />
+       </div>
   );
 }
 
 export default App;
+
