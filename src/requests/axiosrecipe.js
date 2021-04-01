@@ -5,13 +5,22 @@ const apiId = "&app_id=95c4ca1b";
 const maxHits = "&from=0&to=20";
 const maxIngreds = `&ingr=10`;
 
-const fetchRecipes = (ingredients) => {
-  const url = `${apiURL}${ingredients}${maxIngreds}${maxHits}${apiId}${apiKey}`;
+
+const fetchRecipes = (ingredients, value) => {
+  let healthLabels = "";
+  value.forEach((label) => {
+    healthLabels += "&health=" + label;
+  });
+  const url = healthLabels
+    ? `${apiURL}${ingredients}${maxIngreds}${maxTime}${apiId}${apiKey}${healthLabels}`
+    : `${apiURL}${ingredients}${maxIngreds}${maxTime}${apiId}${apiKey}`;
+
   if (ingredients) {
     return axios
       .get(url)
       .then((response) => {
         const recipes = response.data.hits;
+        console.log(recipes);
         return recipes;
 
       })
