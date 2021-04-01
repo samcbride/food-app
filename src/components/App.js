@@ -40,7 +40,6 @@ function App() {
          setSearchResults={setSearchResults} 
         />
       <FilterMenu value={value} setValue={setValue} />
-        <Random />
       </div>
 
       <SearchResults className="searchResults" searchResults={searchResults} />
