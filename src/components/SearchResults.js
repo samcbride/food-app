@@ -5,16 +5,18 @@ import "../styles/SearchResults.css";
 
 const SearchResults = ({ searchResults }) => {
   return (
-    <div className="search-results">
-      {searchResults &&
-        searchResults.map((recipe) => (
-          <Recipe
-            key={recipe.recipe.url}
-            title={recipe.recipe.label}
-            image={recipe.recipe.image}
-            url={recipe.recipe.url}
-          />
-        ))}
+
+    <div className="search-results" data-testid="search-results">
+      {searchResults && 
+      searchResults.map((recipe) => (
+        <Recipe
+          key={recipe.recipe.url}
+          title={recipe.recipe.label}
+          image={recipe.recipe.image}
+          url={recipe.recipe.url}
+        />
+      ))}
+
     </div>
   );
 };

@@ -10,7 +10,7 @@ const Recipe = (props) => {
     ev.target.src = defaultImage;
   };
   return (
-    <div className="recipe">
+    <div className="recipe" data-testid="recipe">
       <div className="recipe__title">{title}</div>
       <a href={url} rel="noreferrer" target="_blank">
         <img
