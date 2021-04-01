@@ -12,8 +12,8 @@ const fetchRecipes = (ingredients, value) => {
     healthLabels += "&health=" + label;
   });
   const url = healthLabels
-    ? `${apiURL}${ingredients}${maxIngreds}${maxTime}${apiId}${apiKey}${healthLabels}`
-    : `${apiURL}${ingredients}${maxIngreds}${maxTime}${apiId}${apiKey}`;
+    ? `${apiURL}${ingredients}${maxIngreds}${maxHits}${apiId}${apiKey}${healthLabels}`
+    : `${apiURL}${ingredients}${maxIngreds}${maxHits}${apiId}${apiKey}`;
 
   if (ingredients) {
     return axios
