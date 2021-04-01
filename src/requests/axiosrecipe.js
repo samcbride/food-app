@@ -13,10 +13,13 @@ const fetchRecipes = (ingredients) => {
       .then((response) => {
         const recipes = response.data.hits;
         return recipes;
+
       })
       .catch((error) => {
         console.log(error);
       });
   }
 };
+
+
 export default fetchRecipes;
