@@ -6,6 +6,7 @@ describe("Recipe", () => {
   const validProps = {
     title: "stub title",
     image: "https://stubiamge.com",
+    url: "https://stuburl.com",
   };
 
   it("renders properly", () => {
