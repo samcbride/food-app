@@ -2,13 +2,15 @@ import { useState } from "react";
 import "../styles/App.css";
 import Search from "./Search";
 import SearchResults from "./SearchResults";
+import FilterMenu from "./FilterMenu";
 import fetchRecipes from "../requests/axiosrecipe";
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
+  const [value, setValue] = useState();
 
   const getResults = async (searchInput) => {
-    const recipes = await fetchRecipes(searchInput);
+    const recipes = await fetchRecipes(searchInput, value);
     setSearchResults(recipes);
   };
 
@@ -20,6 +22,7 @@ function App() {
         handleSubmit={getResults}
         setSearchResults={setSearchResults}
       />
+      <FilterMenu value={value} setValue={setValue} />
       <SearchResults className="searchResults" searchResults={searchResults} />
     </div>
   );
