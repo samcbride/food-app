@@ -1,8 +1,10 @@
 import { useState } from "react";
 import "../styles/App.css";
 import Search from "./Search";
+import Random from "./Random";
 import SearchResults from "./SearchResults";
 import fetchRecipes from "../requests/axiosrecipe";
+import headerimage from "../images/headerimage.jpg";
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
@@ -14,12 +16,14 @@ function App() {
 
   return (
     <div className="App">
-      <p className="title">What's in your cupboard?</p>
-      <Search
-        className="search"
-        handleSubmit={getResults}
-        setSearchResults={setSearchResults}
-      />
+      <div className="header">
+        <img src={headerimage} alt="header-food-display"></img>
+        <h1 className="title">What's in your cupboard?</h1>
+      </div>
+      <div className="wrapper">
+        <Search className="search" handleSubmit={getResults} />
+        <Random />
+      </div>
       <SearchResults className="searchResults" searchResults={searchResults} />
     </div>
   );

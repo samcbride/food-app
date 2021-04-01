@@ -17,31 +17,29 @@ const Search = ({ handleSubmit, setSearchResults }) => {
       setSearchResults([]);
     }
   };
-
   const handleInputChange = (event) => {
     setInputValue(event.target.value);
   };
-
   return (
     <form onSubmit={handleSearch}>
-      <label>
-        Enter your ingredients:
-        <input
-          placeholder="Search"
-          type="text"
-          id="ingredient"
-          name="ingredient"
-          onChange={handleInputChange}
-        />
-      </label>
-      <button type="submit">Search</button>
-      {errorMessage}
+      <div className="search">
+        <label>
+          <input
+            className="input"
+            placeholder="Enter your ingredients"
+            type="text"
+            id="ingredient"
+            name="ingredient"
+            onChange={handleInputChange}
+          />
+        </label>
+        <button type="submit">Search</button>
+        {errorMessage}
+      </div>
     </form>
   );
 };
-
 export default Search;
-
 Search.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
 };
