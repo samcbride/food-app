@@ -22,10 +22,13 @@ const fetchRecipes = (ingredients, value) => {
         const recipes = response.data.hits;
         console.log(recipes);
         return recipes;
+
       })
       .catch((error) => {
         console.log(error);
       });
   }
 };
+
+
 export default fetchRecipes;
