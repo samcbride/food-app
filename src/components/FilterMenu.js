@@ -1,5 +1,6 @@
 import React from "react";
 import Select from "react-select";
+import "../styles/FilterMenu.css";
 
 const FilterMenu = ({ value, setValue }) => {
   const options = [
