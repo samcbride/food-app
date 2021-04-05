@@ -17,16 +17,18 @@ const fetchRecipes = (ingredients, value) => {
     ? `${apiURL}${ingredients}${maxIngreds}${maxHits}${apiId}${apiKey}${healthLabels}`
     : `${apiURL}${ingredients}${maxIngreds}${maxHits}${apiId}${apiKey}`;
 
-  return axios
-    .get(url)
-    .then((response) => {
-      const recipes = response.data.hits;
-      console.log(recipes);
-      return recipes;
-    })
-    .catch((error) => {
-      console.log(error);
-    });
+  if (ingredients) {
+    return axios
+      .get(url)
+      .then((response) => {
+        const recipes = response.data.hits;
+        console.log(recipes);
+        return recipes;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  }
 };
 
 export default fetchRecipes;

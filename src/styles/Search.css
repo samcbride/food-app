@@ -47,3 +47,9 @@ search .button:hover {
   padding: 10px;
   display: inline-block; */
 }
+
+@media (max-width: 530px) {
+  .search {
+    margin: 1em;
+  }
+}

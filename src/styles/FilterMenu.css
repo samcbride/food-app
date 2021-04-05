@@ -1,0 +1,39 @@
+.basic-multi-select {
+  margin: 1em 30em 1em 30em;
+}
+
+@media (max-width: 1560px) {
+  .basic-multi-select {
+    margin: 1em 27em 1em 27em;
+  }
+}
+
+@media (max-width: 1420px) {
+  .basic-multi-select {
+    margin: 1em 20em 1em 20em;
+  }
+}
+
+@media (max-width: 1100px) {
+  .basic-multi-select {
+    margin: 1em 15em 1em 15em;
+  }
+}
+
+@media (max-width: 880px) {
+  .basic-multi-select {
+    margin: 1em 10em 1em 10em;
+  }
+}
+
+@media (max-width: 720px) {
+  .basic-multi-select {
+    margin: 1em 5em 1em 5em;
+  }
+}
+
+@media (max-width: 530px) {
+  .basic-multi-select {
+    margin: 1em;
+  }
+}
