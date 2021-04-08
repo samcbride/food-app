@@ -12,7 +12,7 @@ import headerimage from "../images/headerimage.jpg";
 function App() {
   const [searchResults, setSearchResults] = useState([]);
 
-  const [value, setValue] = useState();
+  const [value, setValue] = useState([]);
 
   const getResults = async (searchInput) => {
     const recipes = await fetchRecipes(searchInput, value);
