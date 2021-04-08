@@ -40,9 +40,13 @@ function App() {
       </div>
 
       <SearchResults className="searchResults" searchResults={searchResults} />
+      
+      <div className="wrapper-r">
       <button className="button" onClick={getRandomResult}>
-        Random Recipe
+        Random Recipe!
       </button>
+      </div>
+      
     </div>
   );
 }
