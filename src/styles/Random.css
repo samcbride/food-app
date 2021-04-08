@@ -1,17 +1,26 @@
 .button {
-	display: block;
-	border: 2px solid #008CBA;
-	background: transparent;
+	display:inline-block;
+	border: 2px solid transparent;
+	background: honeydew;
 	padding: 10px 15px;
 	color: #008CBA;
 	font-size: 20px;
 	border-radius: 5px;
-	cursor: pointer;
-	outline: none;
-	transition: background 1s, color 1s;
+	cursor:pointer;
+	outline:none;
+	transition: background 0.5s, color 1s;
 }
+
 .button:hover{
-	background: #008CBA;
-	color: #fff;
-	box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+  background-color: #83aec3;
+  color: honeydew;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+	
+
 }
+
+.wrapper-r {
+	
+	text-align: center;
+	
+  }
