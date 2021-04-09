@@ -48,6 +48,11 @@ search .button:hover {
   display: inline-block; */
 }
 
+.error {
+  padding-top: 0.25em;
+  margin: 0.5em;
+}
+
 @media (max-width: 530px) {
   .search {
     margin: 1em;

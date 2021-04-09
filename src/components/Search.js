@@ -34,7 +34,7 @@ const Search = ({ handleSubmit, setSearchResults }) => {
           />
         </label>
         <button type="submit">Search</button>
-        {errorMessage}
+        {errorMessage && <div className="error">{errorMessage}</div>}
       </div>
     </form>
   );
