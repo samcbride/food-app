@@ -36,17 +36,14 @@ function App() {
           handleSubmit={getResults}
           setSearchResults={setSearchResults}
         />
-        <FilterMenu value={value} setValue={setValue} />
+        <div className="wrapper-r">
+          <button className="button" onClick={getRandomResult}>
+            Random Recipe!
+          </button>
+        </div>
       </div>
-
+      <FilterMenu value={value} setValue={setValue} />
       <SearchResults className="searchResults" searchResults={searchResults} />
-      
-      <div className="wrapper-r">
-      <button className="button" onClick={getRandomResult}>
-        Random Recipe!
-      </button>
-      </div>
-      
     </div>
   );
 }
