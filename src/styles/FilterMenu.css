@@ -2,6 +2,14 @@
   margin: 1em 30em 1em 30em;
 }
 
+@media (min-width: 1561px) {
+  .basic-multi-select {
+    position: center;
+    max-width: 40%;
+    margin: 1% 40% 0% 40%;
+  } 
+}
+
 @media (max-width: 1560px) {
   .basic-multi-select {
     margin: 1em 27em 1em 27em;
