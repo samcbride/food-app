@@ -1,26 +1,23 @@
 .button {
-	display:inline-block;
-	border: 2px solid transparent;
-	background: honeydew;
-	padding: 10px 15px;
-	color: #008CBA;
-	font-size: 20px;
-	border-radius: 5px;
-	cursor:pointer;
-	outline:none;
-	transition: background 0.5s, color 1s;
+  display: flex;
+  border: 2px solid transparent;
+  background: honeydew;
+  padding: 10px 15px;
+  color: #008cba;
+  font-size: 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  outline: none;
+  transition: background 0.5s, color 1s;
+  justify-content: left;
 }
 
-.button:hover{
+.button:hover {
   background-color: #83aec3;
   color: honeydew;
-  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-	
-
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .wrapper-r {
-	
-	text-align: center;
-	
-  }
+  text-align: center;
+}

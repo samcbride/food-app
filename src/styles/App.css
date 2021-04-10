@@ -1,18 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Amaranth:wght@400;700&family=Berkshire+Swash&display=swap");
-/* * {
-} */
 
 body {
   margin: 0;
   padding: 0;
   background: #b8cfe0;
-
   overflow-x: hidden;
 }
 
 .header {
   position: relative;
-  display: inline-block;
+  display: flex;
 }
 
 .header h1 {
@@ -28,7 +25,6 @@ body {
   width: 60%; /* Set the width of the positioned div */
   font-family: "Amaranth", sans-serif;
   font-weight: bolder;
-  /* backdrop-filter: blur(5px); */
   text-shadow: 2px 2px #7fa8c7;
 }
 
@@ -46,9 +42,11 @@ body {
 
 .wrapper {
   display: flex;
-  flex-direction: column;
-  justify-content: space-around;
+  flex-direction: row;
+  /* justify-content: space-around; */
+  justify-content: center;
   padding-top: 1em;
+  align-items: center;
 }
 
 .wrapper button {
