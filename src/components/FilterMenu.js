@@ -14,10 +14,21 @@ const FilterMenu = ({ value, setValue }) => {
     { value: "tree-nut-free", label: "Tree-nut-free" },
     { value: "sesame-free", label: "Sesame-free" },
   ];
+  const styles = {
+    control: (base) => ({
+      ...base,
+      fontFamily: "Amaranth",
+    }),
+    menu: (base) => ({
+      ...base,
+      fontFamily: "Amaranth",
+    }),
+  };
 
   return (
     <>
       <Select
+        styles={styles}
         options={options}
         isMulti
         name="filters"
