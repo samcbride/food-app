@@ -16,7 +16,7 @@ const FilterMenu = ({ value, setValue }) => {
   ];
 
   return (
-    <>
+    <div className="filterMenu" data-testid="filter">
       <Select
         options={options}
         isMulti
@@ -27,7 +27,7 @@ const FilterMenu = ({ value, setValue }) => {
           setValue(e.map((value) => value.value));
         }}
       />
-    </>
+    </div>
   );
 };
 
