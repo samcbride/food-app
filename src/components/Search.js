@@ -12,7 +12,7 @@ const Search = ({ handleSubmit, setSearchResults }) => {
       handleSubmit(inputValue);
       setErrorMessage("");
     } else {
-      setErrorMessage("Please enter your ingredients");
+      setErrorMessage("* Please enter your ingredients");
       setInputValue("");
       setSearchResults([]);
     }
@@ -33,9 +33,11 @@ const Search = ({ handleSubmit, setSearchResults }) => {
             onChange={handleInputChange}
           />
         </label>
-        <button type="submit">Search</button>
-        {errorMessage && <div className="error">{errorMessage}</div>}
+        <button className="search-button" type="submit">
+          Search
+        </button>
       </div>
+      {errorMessage && <div className="error">{errorMessage}</div>}
     </form>
   );
 };

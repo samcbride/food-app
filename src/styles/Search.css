@@ -30,9 +30,16 @@ button:hover {
   font-family: "Amaranth", sans-serif;
 }
 
+.search-button {
+  margin-left: 1em;
+}
+
 .error {
-  padding-top: 0.25em;
-  margin: 0.5em;
+  display: flex;
+  font-family: "Amaranth", sans-serif;
+  margin-top: 0.5em;
+  justify-content: flex-start;
+  color: #e6360f;
 }
 
 @media (max-width: 530px) {
