@@ -26,7 +26,7 @@ const FilterMenu = ({ value, setValue }) => {
   };
 
   return (
-    <>
+    <div className="filterMenu" data-testid="filter">
       <Select
         styles={styles}
         options={options}
@@ -38,7 +38,7 @@ const FilterMenu = ({ value, setValue }) => {
           setValue(e.map((value) => value.value));
         }}
       />
-    </>
+    </div>
   );
 };
 
