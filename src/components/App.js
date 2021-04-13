@@ -11,8 +11,9 @@ import headerimage from "../images/headerimage.jpg";
 
 function App() {
   const [searchResults, setSearchResults] = useState([]);
-
   const [value, setValue] = useState([]);
+  const [inputValue, setInputValue] = useState();
+  const [errorMessage, setErrorMessage] = useState("");
 
   const getResults = async (searchInput) => {
     const recipes = await fetchRecipes(searchInput, value);
@@ -21,7 +22,25 @@ function App() {
 
   const getRandomResult = async () => {
     const randomRecipe = await GetRandomRecipe();
+    console.log(randomRecipe);
     setSearchResults(randomRecipe);
+    setErrorMessage("");
+  };
+
+  const handleSearch = (event) => {
+    event.preventDefault();
+    if (inputValue) {
+      getResults(inputValue);
+      setErrorMessage("");
+    } else {
+      setErrorMessage("* Please enter your ingredients");
+      setInputValue("");
+      setSearchResults([]);
+    }
+  };
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
   };
 
   return (
@@ -33,8 +52,9 @@ function App() {
       <div className="wrapper">
         <Search
           className="search"
-          handleSubmit={getResults}
-          setSearchResults={setSearchResults}
+          handleSubmit={handleSearch}
+          handleInputChange={handleInputChange}
+          errorMessage={errorMessage}
         />
         <div className="wrapper-r">
           <button className="button" onClick={getRandomResult}>
