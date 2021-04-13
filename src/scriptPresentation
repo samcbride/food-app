@@ -1,0 +1,72 @@
+Hey guys, we are here to present our final project: 'What's in your cupboard', a food recipe finder. 
+
+We dedicated the first meeting to establish the objectives of what we though it could be reasonable to achieve in a period of 2-3 weeks:
+
+//Use a presentation-animation of the objectives //
+
+- An app easy to use for everyone
+- Displayed for all types of devices
+- Some type of funny extra ('random button')
+- Some accesibility ('health labels')
+
+With the objectives in mind we started drawing the first sketch of the app // introduce Miro board image // and we identified the components we wanted to develop:
+
+// For each component, show two windows, one with the component set up in the screen and the other with the code //
+
+- A search bar and button  where to introduce the ingredients and click 
+
+
+- A recipe where to store the results of the search.
+
+
+- The results of the search
+
+- The two extras to add something more: a random button that would show a recipe randomized and a variety of labels to filter your search across your dietary restrictions.
+
+- Also, for a matter of convenience and time we decided to look for a third-party API that would allow us to search a database. We chose Edamam because its documentation was easy to understand and had a wide variety of extras. //show Edamam label //
+
+For request we used the method axios
+
+Structure
+
+Introduction
+
+  Objectives:
+
+
+  First look/idea:
+
+
+Components
+
+    App:
+
+    Search:
+
+    SearchResults:
+
+    Recipe:
+
+    Random:
+
+    FilterMenu:
+
+Get Axios.
+
+Problems we faced with the components?
+
+Styles
+
+    Aesthetic:
+
+    Responsiveness:
+
+Testing
+
+
+
+Conclusion
+
+    Objectives achieved:
+
+    Extra/Further objectives:
