@@ -16,6 +16,7 @@ exports[`Search renders correctly 1`] = `
         />
       </label>
       <button
+        class="search-button"
         type="submit"
       >
         Search

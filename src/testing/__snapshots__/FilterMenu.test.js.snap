@@ -16,7 +16,7 @@ exports[`FilterMenu renders correctly 1`] = `
         class="css-1f43avz-a11yText-A11yText"
       />
       <div
-        class="select__control css-yk16xz-control"
+        class="select__control css-146z1ci-control"
       >
         <div
           class="select__value-container select__value-container--is-multi css-g1d714-ValueContainer"
