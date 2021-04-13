@@ -3,7 +3,7 @@ import Search from "./Search";
 import SearchResults from "./SearchResults";
 import FilterMenu from "./FilterMenu";
 import fetchRecipes from "../requests/axiosrecipe";
-
+import "../styles/Edamam.css";
 import "../styles/App.css";
 import "../styles/Random.css";
 import GetRandomRecipe from "./Random";
@@ -44,6 +44,12 @@ function App() {
       </div>
       <FilterMenu value={value} setValue={setValue} />
       <SearchResults className="searchResults" searchResults={searchResults} />
+      <div className="edamam-container">
+        <div id="edamam-badge" data-color="transparent"></div>
+      </div>
+      
+
+
     </div>
   );
 }
