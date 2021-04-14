@@ -1,27 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 import PropTypes from "prop-types";
 import "../styles/Search.css";
 
-const Search = ({ handleSubmit, setSearchResults }) => {
-  const [inputValue, setInputValue] = useState();
-  const [errorMessage, setErrorMessage] = useState("");
-
-  const handleSearch = (event) => {
-    event.preventDefault();
-    if (inputValue) {
-      handleSubmit(inputValue);
-      setErrorMessage("");
-    } else {
-      setErrorMessage("* Please enter your ingredients");
-      setInputValue("");
-      setSearchResults([]);
-    }
-  };
-  const handleInputChange = (event) => {
-    setInputValue(event.target.value);
-  };
+const Search = ({ handleSubmit, handleInputChange, errorMessage }) => {
   return (
-    <form onSubmit={handleSearch}>
+    <form onSubmit={handleSubmit}>
       <div className="search">
         <label>
           <input
