@@ -21,7 +21,7 @@ function App() {
   };
 
   const getRandomResult = async () => {
-    const randomRecipe = await GetRandomRecipe();
+    const randomRecipe = await GetRandomRecipe(value);
     console.log(randomRecipe);
     setSearchResults(randomRecipe);
     setErrorMessage("");
@@ -67,9 +67,6 @@ function App() {
       <div className="edamam-container">
         <div id="edamam-badge" data-color="transparent"></div>
       </div>
-      
-
-
     </div>
   );
 }
