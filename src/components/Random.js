@@ -1,18 +1,46 @@
 import axios from "axios";
 import "../styles/Random.css";
 
-
-
-function GetRandomRecipe() {
-
+function GetRandomRecipe(value) {
+  let healthLabels = "";
+  if (value) {
+    value.forEach((label) => {
+      healthLabels += "&health=" + label;
+    });
+  }
 
   /*--------------------------Randomize List-------------------------------------*/
 
   const randomList = [
-    "a", "b", "c", "d", "e", "f", "g", "h", "i",
-    "j", "k", "l", "m", "n", "o", "p", "q", "r",
-    "s", "t", "u", "v", "w", "x", "y", "z",];
-  const randomResult = randomList[Math.floor(Math.random() * randomList.length)];
+    "a",
+    "b",
+    "c",
+    "d",
+    "e",
+    "f",
+    "g",
+    "h",
+    "i",
+    "j",
+    "k",
+    "l",
+    "m",
+    "n",
+    "o",
+    "p",
+    "q",
+    "r",
+    "s",
+    "t",
+    "u",
+    "v",
+    "w",
+    "x",
+    "y",
+    "z",
+  ];
+  const randomResult =
+    randomList[Math.floor(Math.random() * randomList.length)];
 
   /*--------------------------Axios Call Randomized-------------------------------------*/
   const apiURL = "https://api.edamam.com/search?q=";
@@ -22,13 +50,19 @@ function GetRandomRecipe() {
   const maxHits = 25;
   const maxHitsUrl = `&from=${minHits}&to=${maxHits}`;
 
-  const url = `${apiURL}${randomResult}${maxHitsUrl}${apiId}${apiKey}`;
+  const url = healthLabels
+    ? `${apiURL}${randomResult}${maxHitsUrl}${apiId}${apiKey}${healthLabels}`
+    : `${apiURL}${randomResult}${maxHitsUrl}${apiId}${apiKey}`;
   return axios
     .get(url)
     .then((response) => {
       const recipes = response.data.hits;
+      console.log(recipes);
       return [recipes[Math.floor(Math.random() * (maxHits - 1) + minHits)]];
+    })
+    .catch((error) => {
+      console.log(error);
     });
-};
+}
 
 export default GetRandomRecipe;
