@@ -22,7 +22,6 @@ const fetchRecipes = (ingredients, value) => {
       .get(url)
       .then((response) => {
         const recipes = response.data.hits;
-        console.log(recipes);
         return recipes;
       })
       .catch((error) => {

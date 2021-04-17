@@ -57,7 +57,6 @@ function GetRandomRecipe(value) {
     .get(url)
     .then((response) => {
       const recipes = response.data.hits;
-      console.log(recipes);
       return [recipes[Math.floor(Math.random() * (maxHits - 1) + minHits)]];
     })
     .catch((error) => {

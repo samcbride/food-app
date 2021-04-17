@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import Select from "react-select";
 import "../styles/FilterMenu.css";
 
@@ -43,3 +44,8 @@ const FilterMenu = ({ value, setValue }) => {
 };
 
 export default FilterMenu;
+
+FilterMenu.propTypes = {
+  value: PropTypes.array.isRequired,
+  setValue: PropTypes.func.isRequired,
+};
