@@ -61,7 +61,7 @@ function App() {
           </button>
         </div>
       </div>
-      <FilterMenu value={value} setValue={setValue} />
+      <FilterMenu setValue={setValue} />
       <SearchResults className="searchResults" searchResults={searchResults} />
       <div className="edamam-container">
         <div id="edamam-badge" data-color="transparent"></div>

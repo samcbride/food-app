@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Select from "react-select";
 import "../styles/FilterMenu.css";
 
-const FilterMenu = ({ value, setValue }) => {
+const FilterMenu = ({ setValue }) => {
   const options = [
     { value: "vegan", label: "Vegan" },
     { value: "vegetarian", label: "Vegetarian" },
@@ -46,6 +46,5 @@ const FilterMenu = ({ value, setValue }) => {
 export default FilterMenu;
 
 FilterMenu.propTypes = {
-  value: PropTypes.array.isRequired,
   setValue: PropTypes.func.isRequired,
 };

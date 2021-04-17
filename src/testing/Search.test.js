@@ -4,14 +4,16 @@ import Search from "../components/Search";
 describe("Search", () => {
   const validProps = {
     handleSubmit: () => {},
-    setSearchResults: [],
+    handleInputChange: () => {},
+    errorMessage: "",
   };
 
   it("renders correctly", () => {
     const { asFragment } = render(
       <Search
         handleSubmit={validProps.handleSubmit}
-        setSearchResults={validProps.setSearchResults}
+        handleInputChange={validProps.handleInputChange}
+        errorMessage={validProps.errorMessage}
       />
     );
     expect(asFragment()).toMatchSnapshot();
@@ -21,7 +23,8 @@ describe("Search", () => {
     const { getByRole } = render(
       <Search
         handleSubmit={validProps.handleSubmit}
-        setSearchResults={validProps.setSearchResults}
+        handleInputChange={validProps.handleInputChange}
+        errorMessage={validProps.errorMessage}
       />
     );
     const button = getByRole("button", { name: /Search/i });
