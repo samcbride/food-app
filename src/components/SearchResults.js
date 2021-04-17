@@ -19,6 +19,8 @@ const SearchResults = ({ searchResults }) => {
   );
 };
 
+export default SearchResults;
+
 SearchResults.propTypes = {
   searchResults: PropTypes.arrayOf(
     PropTypes.shape({
@@ -28,5 +30,3 @@ SearchResults.propTypes = {
     })
   ).isRequired,
 };
-
-export default SearchResults;

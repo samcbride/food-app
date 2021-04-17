@@ -22,7 +22,6 @@ function App() {
 
   const getRandomResult = async () => {
     const randomRecipe = await GetRandomRecipe(value);
-    console.log(randomRecipe);
     setSearchResults(randomRecipe);
     setErrorMessage("");
   };

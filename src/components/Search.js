@@ -24,7 +24,15 @@ const Search = ({ handleSubmit, handleInputChange, errorMessage }) => {
     </form>
   );
 };
+
 export default Search;
+
+Search.defaultProps = {
+  errorMessage: "",
+};
+
 Search.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
+  handleInputChange: PropTypes.func.isRequired,
+  errorMessage: PropTypes.string,
 };
