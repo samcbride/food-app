@@ -38,6 +38,7 @@ The app is also deployed on Vercel via this URL: `https://food-app.vercel.app/`
 ## Features
 
 - Random recipe button
+  - We wanted to create some sort of fun functionality and decided to create a Random button that would select a random recipe for the user. An array of objects (letters) is passed through a math.random() method and used to make a random call. The result of the callback is also randomized with another random method and is exported to the button in App.
 - Health labels for nutritional dietary restrictions
   - The API we used (Edamam) had pre-built in health-labels, which categorized the recipes according to which health-label criteria they met, such as Vegan or Peanut-free. There were a large number of options within these health labels and to avoid making the app bogged down with too many options we decided to select the most common dietary preferences and allergies. We created an array of objects with the values and labels of the health options and then passed this into our dropdown menu. We decided to use a package, which contained a pre-made dropdown menu, as this package contained a dropdown menu that allowed for multiple inputs to be added. Therefore, someone who was vegan and also had a peanut-allergy could filter the results based on this criteria and not be inconvenienced having to look through all the options to see if they were suitable.
 - Totally responsive to all screen and devices
